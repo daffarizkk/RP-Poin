@@ -19,7 +19,6 @@ var contactSchema = mongoose.Schema({
     poin: {
         type: Number,
         min: 0,
-        unique: true
     },
     phone: Number,
     create_date: {
