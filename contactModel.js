@@ -3,7 +3,8 @@ var mongoose = require('mongoose');
 var contactSchema = mongoose.Schema({
     user_id: {
         type: String,
-        required: true
+        required: true,
+        unique: true,
     },
     name: {
         type: String,
@@ -11,7 +12,8 @@ var contactSchema = mongoose.Schema({
     },
     email: {
         type: String,
-        required: true
+        required: true,
+        unique: true
     },
     gender: String,
     poin: {
