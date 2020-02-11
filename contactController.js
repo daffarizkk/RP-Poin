@@ -87,7 +87,6 @@ exports.poin = function (req, res) {
             contact.user_id = req.body.user_id;
         //    contact.gender = req.body.gender;
             contact.poin = Math.round(parseInt(contact.poin) + parseInt(req.body.poin));
-            //  contact.poin + req.body.poin;
           //  contact.email = req.body.email;
             //contact.phone = req.body.phone;
     
