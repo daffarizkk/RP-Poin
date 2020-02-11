@@ -76,6 +76,34 @@ contact.name = req.body.name ? req.body.name : contact.name;
     });
 };
 
+//Handle update poin
+exports.poin = function (req, res) {
+
+    Contact.findOne({user_id:req.params.contactuser_id}, function (err, contact, value) {
+            if (err)
+                res.send(err);
+
+    contact.name = req.body.name ? req.body.name : contact.name;
+            contact.user_id = req.body.user_id;
+        //    contact.gender = req.body.gender;
+            contact.poin = Math.round(parseInt(contact.poin) + parseInt(req.body.poin));
+            //  contact.poin + req.body.poin;
+          //  contact.email = req.body.email;
+            //contact.phone = req.body.phone;
+    
+    // save the contact
+            contact.save(function (err) {
+                if (err)
+                    res.json(err);
+                res.json({
+                    message: 'Poin updated',
+                    data: contact
+                });
+            });
+        });
+    };
+
+
 // DELETE
 exports.delete = function (req, res) {
     Contact.remove({
