@@ -17,5 +17,13 @@ router.route('/users/:contactuser_id')
     .patch(contactController.update)
     .put(contactController.update)
     .delete(contactController.delete);
+//Contact poin
+router.route('/poin')
+    .get(contactController.index)
+    .post(contactController.new);
+router.route('/poin/:contactuser_id')
+    .post(contactController.poin)
+    .get(contactController.view)
+    .delete(contactController.delete);
 // Export API routes
 module.exports = router;
