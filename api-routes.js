@@ -24,6 +24,7 @@ router.route('/poin')
 router.route('/poin/:contactuser_id')
     .post(contactController.poin)
     .get(contactController.view)
+    .put(contactController.update)
     .delete(contactController.delete);
 // Export API routes
 module.exports = router;
