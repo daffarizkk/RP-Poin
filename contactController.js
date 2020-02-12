@@ -84,7 +84,7 @@ exports.poin = function (req, res) {
                 res.send(err);
 
     contact.name = req.body.name ? req.body.name : contact.name;
-            contact.user_id = req.body.user_id;
+           // contact.user_id = req.body.user_id;
         //    contact.gender = req.body.gender;
             contact.poin = parseFloat(contact.poin) + parseFloat(req.body.poin);
           //  contact.email = req.body.email;
@@ -100,7 +100,6 @@ exports.poin = function (req, res) {
             });
         });
     };
-
 
 // DELETE
 exports.delete = function (req, res) {
