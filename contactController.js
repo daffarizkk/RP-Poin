@@ -60,7 +60,7 @@ Contact.findOne({user_id:req.params.contactuser_id}, function (err, contact) {
 contact.name = req.body.name ? req.body.name : contact.name;
         contact.user_id = req.body.user_id;
         contact.gender = req.body.gender;
-        contact.poin = req.body.poin;
+    //    contact.poin = req.body.poin;
         contact.email = req.body.email;
         contact.phone = req.body.phone;
 
