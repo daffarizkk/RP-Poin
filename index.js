@@ -3,6 +3,11 @@ let apiRoutes = require("./api-routes")
 let bodyParser = require('body-parser');
 let mongoose = require('mongoose');
 let app = express();
+let mongooseMorgan = require('mongoose-morgan')
+
+app.use(mongooseMorgan({
+    connectionString: 'mongodb://localhost:27017/logs-db'
+}));
 
 app.use(bodyParser.urlencoded({
     extended: true
